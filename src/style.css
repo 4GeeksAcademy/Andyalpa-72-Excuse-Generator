@@ -1,1 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+#pizzaGenerate {
+  text-align: center;
+}
+
+.container {
+  justify-content: center;
+}

@@ -7,5 +7,45 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  const firstToppings = [
+    "Bell Peppers",
+    "Mushrooms",
+    "Spinach",
+    "Red Onions",
+    "Artichoke Hearts",
+    "No Vegetables"
+  ];
+  const secondToppings = [
+    "Pepperoni",
+    "Sausage",
+    "Bacon",
+    "Ham",
+    "Chicken",
+    "No Meat"
+  ];
+  const sizes = ["Small", "Medium", "Family", "Large"];
+
+  const getRandomElement = arr => {
+    return arr[Math.floor(Math.random() * arr.length)];
+  };
+
+  const generatorPizza = () => {
+    const size = getRandomElement(sizes);
+    const toppingOne = getRandomElement(firstToppings);
+    const toppingTwo = getRandomElement(secondToppings);
+
+    if (toppingOne == "No Vegetables" && toppingTwo == "No Meat") {
+      document.getElementById(
+        "pizzaGenerate"
+      ).innerText = `Your ${size} cheese pizza, is ready!!!!`;
+    } else {
+      document.getElementById(
+        "pizzaGenerate"
+      ).innerText = `Your ${size} pizza with ${toppingOne} and ${toppingTwo}, is ready!!!!`;
+    }
+  };
+
+  generatorPizza();
+
+  document.querySelector(".btn").addEventListener("click", generatorPizza);
 };
