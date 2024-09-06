@@ -37,11 +37,11 @@ window.onload = function() {
     if (toppingOne == "No Vegetables" && toppingTwo == "No Meat") {
       document.getElementById(
         "pizzaGenerate"
-      ).innerText = `Your ${size} cheese pizza, is ready!!!!`;
+      ).innerText = `Your ${size.toLowerCase()} cheese pizza, is ready!!!!`;
     } else {
       document.getElementById(
         "pizzaGenerate"
-      ).innerText = `Your ${size} pizza with ${toppingOne} and ${toppingTwo}, is ready!!!!`;
+      ).innerText = `Your ${size.toLowerCase()} pizza with ${toppingOne.toLowerCase()} and ${toppingTwo.toLowerCase()}, is ready!!!!`;
     }
   };
 
